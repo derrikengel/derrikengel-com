@@ -208,8 +208,8 @@ a.home:hover:after {
 }
 
 .icon-email {
-	height: 24px;
-	width: 37px;
+	height: 21px;
+	width: 32px;
 }
 
 .icon-twitter {
@@ -274,8 +274,8 @@ a.home:hover:after {
 	}
 
 	.icon-email {
-		height: 18px;
-		width: 28px;
+		height: 16px;
+		width: 24px;
 	}
 
 	.icon-twitter {
@@ -295,7 +295,7 @@ a.home:hover:after {
 	}
 
 	h1 {
-		letter-spacing: -0.1em;
+		letter-spacing: normal;
 	}
 
 	h2 {
