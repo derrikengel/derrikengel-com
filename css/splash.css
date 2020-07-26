@@ -1,17 +1,14 @@
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	outline: 0 !important;
 }
 
 html {
-	background: #1f2025 url('/images/splash-bg.jpg') 50% 0 no-repeat;
-	background-size: cover;
+	background: #1f2025;
 	color: #fff;
-	font-family: 'Brandon Grotesque W01', sans-serif;
-	font-size: 100%;
-	font-weight: 100;
+	font-family: 'Poppins', sans-serif;
+	font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1900 - 320)));
+	font-weight: 200;
 	height: 100%;
 	line-height: 1.4;
 	position: relative;
@@ -20,290 +17,163 @@ html {
 }
 
 a {
-	color: #bf2e1a;
+	color: #f96143;
 	text-decoration: none;
+	transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 a:link {
-	color: #bf2e1a;
+	color: #f96143;
 }
 
 a:visited {
-	color: #bf2e1a;
+	color: #f96143;
 }
 
-a:hover {
-	color: #29353f;
+a:hover,
+a:focus {
+	color: #fff;
 }
 
 a:active {
-	color: #bf2e1a;
+	color: #f96143;
 }
 
 ::-moz-selection {
-	background: #f63c38;
-	color: #fff;
+	background-color: rgba(159, 198, 182, 0.99);
+	color: #1f2025;
 }
 
 ::selection {
-	background: #f63c38;
-	color: #fff;
+	background-color: rgba(159, 198, 182, 0.99);
+	color: #1f2025;
 }
 
 b,
 strong {
-	font-weight: 500;
-}
-
-img, object, embed {
-	height: auto !important;
-	max-width: 100%;
-}
-
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-.clearfix {
-	*zoom: 1;
+	font-weight: 700;
 }
 
 header {
-	margin-top: -8em;
-	padding: 0 2em;
-	position: absolute;
-	top: 50%;
-	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 2em;
 }
 
 h1 {
 	color: #fff;
-	font-size: 6em;
-	font-weight: 800;
-	letter-spacing: 0.5em;
+	font-size: 3.5em;
+	font-weight: 700;
+	letter-spacing: 0.25em;
 	line-height: 1;
 	margin: 0 0 0.25em 0;
 	text-transform: uppercase;
+	transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 h2 {
-	color: #fff;
-	font-size: 1.75em;
-	font-weight: 100;
-	letter-spacing: 1.35em;
-	line-height: 1;
-	margin: 0 0 3em 0;
-	opacity: 0.5;
+	color: #9fc6b6;
+	font-size: 1em;
+	font-weight: 200;
+	letter-spacing: 0.75em;
+	line-height: 1.375;
+	margin: 0 0 2em 0;
 	text-transform: uppercase;
+	transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 a.home {
-	color: #fff;
-	font-weight: 100;
-	letter-spacing: 0.1em;
+	font-weight: 200;
+	letter-spacing: 0.75em;
 	padding: 0.25em 0;
 	position: relative;
 	text-transform: uppercase;
 }
 
 a.home:after {
-	background: #bf2e1a;
+	background: #f96143;
 	content: "\0020";
 	height: 1px;
 	left: 0;
 	position: absolute;
 	pointer-events: none;
 	top: 100%;
-	-moz-transform: scaleX(0);
-	-ms-transform: scaleX(0);
-	-o-transform: scaleX(0);
-	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
-	-webkit-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	width: 100%;
 }
 
 a.home:hover:after {
-	-moz-transform: scaleX(1);
-	-ms-transform: scaleX(1);
-	-o-transform: scaleX(1);
-	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 
+.social {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
 .icon {
-	display: inline-block;
-	height: 24px;
-	margin: 0 1em;
+	align-items: center;
+	display: flex;
+	height: 3em;
+	justify-content: center;
+	margin: 0 0.5em;
 	position: relative;
-	vertical-align: middle;
-	width: 70px;
+	width: 3em;
+}
+
+.icon:before,
+.icon:after {
+	border-radius: 100%;
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: scale(0);
+	width: 100%;
+	z-index: 10;
 }
 
 .icon:before {
-	border: 1px solid #f63b38;
-	border-radius: 50%;
-	content: '\0020';
-	height: 76px;
-	left: -4px;
-	position: absolute;
-	top: -27px;
-	-webkit-transform: scale(0);
-	-moz-transform: scale(0);
-	-ms-transform: scale(0);
-	-o-transform: scale(0);
-	transform: scale(0);
-	-webkit-transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	box-shadow: inset 0 0 0 1px #f96143;
 	transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	width: 76px;
-	z-index: 1;
-}
-
-.icon:hover:before {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-o-transform: scale(1);
-	transform: scale(1);
 }
 
 .icon:after {
-	background: #f63b38;
-	border-radius: 50%;
-	content: '\0020';
-	height: 70px;
-	left: 0;
-	position: absolute;
-	top: -23px;
-	-webkit-transform: scale(0);
-	-moz-transform: scale(0);
-	-ms-transform: scale(0);
-	-o-transform: scale(0);
-	transform: scale(0);
-	-webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	background: #f96143;
 	transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	width: 70px;
-	z-index: 1;
 }
 
-.icon:hover:after {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-o-transform: scale(1);
+.icon:hover:before,
+.icon:focus:before,
+.icon:hover:after,
+.icon:focus:after {
 	transform: scale(1);
 }
 
 .icon svg {
-	fill: #fff;
+	fill: #f96143;
 	position: relative;
-	z-index: 2;
+	transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	z-index: 20;
+}
+
+.icon:hover svg,
+.icon:focus svg {
+	fill: #1f2025;
 }
 
 .icon-email {
-	height: 21px;
-	width: 32px;
-}
-
-.icon-twitter {
-	height: 24px;
-	width: 29px;
+	height: 0.9166666666666667em;
+	width: 1.416666666666667em;
 }
 
 .icon-linkedin {
-	height: 24px;
-	width: 24px;
-}
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-@media only screen and (max-width: 1350px) {
-	header {
-		margin-top: -5.5em;
-	}
-
-	h1 {
-		font-size: 4em;
-	}
-
-	h2 {
-		font-size: 1.5em;
-		letter-spacing: 0.9375em;
-	}
-}
-
-@media only screen and (max-width: 950px) {
-	header {
-		margin-top: -4em;
-	}
-
-	h1 {
-		font-size: 2.5em;
-	}
-
-	h2 {
-		font-size: 1em;
-		letter-spacing: 0.8375em;
-		margin-bottom: 2em;
-	}
-
-	.icon {
-		height: 18px;
-		margin: 0 0.25em;
-		width: 54px;
-	}
-
-	.icon:before {
-		height: 60px;
-		top: -22px;
-		width: 60px;
-	}
-
-	.icon:after {
-		height: 54px;
-		top: -18px;
-		width: 54px;
-	}
-
-	.icon-email {
-		height: 16px;
-		width: 24px;
-	}
-
-	.icon-twitter {
-		height: 18px;
-		width: 22px;
-	}
-
-	.icon-linkedin {
-		height: 18px;
-		width: 18px;
-	}
-}
-
-@media only screen and (max-width: 600px) {
-	header {
-		margin-top: -5.5em;
-	}
-
-	h1 {
-		letter-spacing: normal;
-	}
-
-	h2 {
-		line-height: 1.2;
-		letter-spacing: 0.5em;
-	}
-
-	h2 span {
-		display: block;
-	}
+	height: 1em;
+	width: 1em;
 }
